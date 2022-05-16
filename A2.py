@@ -5,10 +5,9 @@ class Node():
         self.parent = parent
         self.position = position
 
-        self.f = 0
         self.g = 0
         self.h = 0
-        
+        self.f = 0
 
     def __eq__(self, other):
         return self.position == other.position
@@ -36,7 +35,6 @@ def astar(maze, start, end):
         # Get the current node
         current_node = open_list[0]
         current_index = 0
-
         for index, item in enumerate(open_list):
             if item.f < current_node.f:
                 current_node = item
@@ -57,7 +55,6 @@ def astar(maze, start, end):
 
         # Generate children
         children = []
-
         # Adjacent squares
         for new_position in [(0, -1), (0, 1), (-1, 0), (1, 0), (-1, -1), (-1, 1), (1, -1), (1, 1)]:
 
@@ -89,8 +86,8 @@ def astar(maze, start, end):
 
             # Create the f, g, and h values
             child.g = current_node.g + 1
-            child.h = ((child.position[0] - end_node.position[0]) **2) 
-            + ((child.position[1] - end_node.position[1]) ** 2)
+            child.h = ((child.position[0] - end_node.position[0]) **
+                       2) + ((child.position[1] - end_node.position[1]) ** 2)
             child.f = child.g + child.h
 
             # Child is already in the open list
