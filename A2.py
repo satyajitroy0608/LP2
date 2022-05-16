@@ -150,3 +150,8 @@ Fail to find the target square, and the open list is empty. In this case, there 
 3. Save the path. Working backwards from the target square, go from each square to its parent square until you reach the starting square. That is your path.
 
 '''
+
+'''
+OUTPUT OF THE PROGRAM
+[(0, 0), (1, 1), (2, 2), (3, 3), (4, 3), (5, 4), (6, 5), (7, 5), (8, 5), (9, 4)]
+'''
