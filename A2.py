@@ -122,7 +122,6 @@ def main():
 if __name__ == '__main__':
     main()
     
-    
 '''A* is a graph traversal and path search algorithm, which is often used in many fields of computer science due to its completeness, optimality, and optimal efficiency. '''
 
 
@@ -146,6 +145,11 @@ Add the target square to the closed list, in which case the path has been found,
 Fail to find the target square, and the open list is empty. In this case, there is no path.
 3. Save the path. Working backwards from the target square, go from each square to its parent square until you reach the starting square. That is your path.
 
+'''
+
+'''
+OUTPUT
+[(0, 0), (1, 1), (2, 2), (3, 3), (4, 3), (5, 4), (6, 3), (7, 3), (8, 3), (9, 4)]
 '''
 
 
