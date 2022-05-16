@@ -1,0 +1,39 @@
+The qemu package (quick emulator) is an application that allows you to perform hardware virtualization.
+The qemu-kvm package is the main KVM package.
+The libvritd-daemon is the virtualization daemon.
+The bridge-utils package helps you create a bridge connection to allow other users to access a virtual machine other than the host system.
+The virt-manager is an application for managing virtual machines through a graphical user interface.
+
+// TO CHECK
+
+egrep -c '(vmx|svm)' /proc/cpuinfo
+
+
+sudo apt install cpu-checker
+
+sudo kvm-ok
+
+// INSTALL PACKAGES kvm
+
+sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
+
+sudo systemctl status libvirtd
+
+// to check if kvm modules loaded 
+lsmod | grep -i kvm
+
+
+//CREATE vm
+
+sudo virt-install --name=deepin-vm --os-variant=Debian10 --vcpu=2 --ram=2048 --graphics spice --location=/home/Downloads/deepin-20Beta-desktop-amd64.iso --network bridge:vibr0 
+
+The --name option specifies the name of the virtual machine – deepin-vm The --os-variant flag indicates the OS family or derivate of the VM. Since Deepin20 is a derivative of Debian, I have specified Debian 10 as the variant.
+
+To get additional information about OS variants, run the command
+
+$ osinfo-query os
+
+
+//CREATE vm2
+
+sudo virt-manager
