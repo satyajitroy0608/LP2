@@ -1,0 +1,52 @@
+public class studentIM {
+
+public Student__c c { get; set; }
+public String studentID {get; set;} 
+
+public List<Student__c> samepage { get; set; } // list of students
+
+// constructor 
+public studentIM(){ 
+	c=new Student__c();
+    samepage=[select Name,FirstName__c,LastName__c,DOB__c,Department__c from Student__c]; // display table
+}
+
+public PageReference save() {
+    insert c;
+    samepage= [select Name,FirstName__c,LastName__c,DOB__c,Department__c from Student__c];
+    c = new Student__c();    
+    return null;
+}
+public PageReference delete1(){
+    delete[SELECT Name FROM Student__c where Name=:studentID];
+    samepage= [select Name,FirstName__c,LastName__c,DOB__c,Department__c from Student__c ];
+    return null;
+    
+}
+public PageReference update1() {
+    List<Student__c> conts=[select Name from Student__c where Name=:studentID limit 1];
+
+
+    if (!conts.isEmpty())
+    {
+        Student__c cont=conts[0];
+        if(!String.isBlank(c.FirstName__c)){
+        cont.FirstName__c = c.FirstName__c;
+        }
+        if(!String.isBlank(c.LastName__c)){
+        cont.LastName__c = c.LastName__c;
+        }
+        if(c.DOB__c != null){
+            cont.DOB__c = c.DOB__c;
+        }
+        if(c.Department__c != null){
+            cont.Department__c = c.Department__c;
+        }
+        
+        update cont;
+    }
+    samepage= [select Name,FirstName__c,LastName__c,DOB__c,Department__c from Student__c ];
+    return null;
+}
+
+}

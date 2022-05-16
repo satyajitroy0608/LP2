@@ -1,0 +1,12 @@
+A chatbot is a smart application that reduces human work and helps an organization to solve basic queries of the customer. Today most of the companies, business from different sector makes use of chatbot in a different way to reply their customer as fast as possible. chatbots also help in increasing traffic of site which is top reason of business to use chatbots.
+
+Chatbot asks for basic information of customers like name, email address, and the query. If a query is simple like product fault, booking mistake, need some information then without any human connection it can solve it automatically and If some problem is high then It passes the details to the human head and helps customer to connect with organization manager easily. And most of the customers like to deal and talk with a chatbot.
+
+1) Rule-based Chatbots – As the Name suggests, there are certain rules on which chatbot operates. Like a Machine learning model, we train the chatbots on user intents and relevant responses, and based on these intents chatbot identifies the new user’s intent and response to him.
+2) Self-learning chatbots – Self-learning bots are highly efficient because they are capable to grab and identify the user’s intent on their own. they are build using advanced tools and techniques of Machine Learning, Deep Learning, and NLP. Self-learning bots are further divided into 2 subcategories.
+
+Chat – Chat is a class that contains complete logic for processing the text data which the chatbot receives and find useful information out of it.
+reflections – Another import we have done is reflections which is a dictionary containing basic input and corresponding outputs. You can also create your own dictionary with more responses you want. if you print reflections it will be something like this.
+
+
+Chatbots are the top application of Natural Language processing and today it is simple to create and integrate with various social medial handle and websites. Today most Chatbots are created using tools like Dialogflow, RASA, etc. This was a quick introduction to chatbots to present an understanding of how businesses are transforming using Data science and artificial Intelligence.
